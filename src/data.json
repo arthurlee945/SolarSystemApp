@@ -1,0 +1,66 @@
+{
+  "mercury":{
+    "day":"59 Earth days",
+    "year": "88 Earth days",
+    "radius": "2,439.7 Kilometers",
+    "planetType":"Terrestrial",
+    "info":"The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter.",
+    "url":"https://solarsystem.nasa.gov/planets/mercury/overview/"
+  },
+  "venus":{
+    "day": "243 Earth days",
+    "year": "225 Earth days",
+    "radius": "6,050 kilometers",
+    "planetType": "Terrestrial",
+    "info":"Venus is a cloud-swaddled planet named for a love goddess, often called Earth`s twin. But pull up a bit closer, and Venus turns hellish. Our nearest planetary neighbor, the second planet from the Sun, has a surface hot enough to melt lead. The atmosphere is so thick that, from the surface, the Sun is just a smear of light.",
+    "url": "https://solarsystem.nasa.gov/planets/venus/overview/"
+  },
+  "earth":{
+    "day": "23.9 hours",
+    "year": "365.25 days",
+    "radius": "6,371 kilometers",
+    "planetType": "Terrestrial",
+    "info":"Our home planet is the third planet from the Sun, and the only place we know of so far that`s inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.",
+    "url":"https://solarsystem.nasa.gov/planets/earth/overview/"
+  },
+  "mars":{
+    "day": "24.6 hours",
+    "year": "687 Earth days",
+    "radius": "3,390 kilometers",
+    "planetType": "Terrestrial",
+    "info":"Mars is no place for the faint-hearted. It`s dry, rocky, and bitter cold. The fourth planet from the Sun, Mars is one of Earth's two closest planetary neighbors (Venus is the other). Mars is one of the easiest planets to spot in the night sky. It looks like a bright red point of light.",
+    "url":"https://solarsystem.nasa.gov/planets/mars/overview/"
+  },
+  "jupiter":{
+    "day":"9.93 hours",
+    "year":"11.86 Earth Years",
+    "radius": "71,462 kilometers",
+    "planetType": "Gas Giant",
+    "info":"Jupiter is the fifth planet from our Sun and is, by far, the largest planet in the solar system, more than twice as massive as all the other planets combined. Jupiter's stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter`s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+    "url":"https://solarsystem.nasa.gov/planets/jupiter/overview/"
+  },
+  "saturn":{
+    "day":"10.7 hours",
+    "year":"29 Earth years",
+    "radius": "58,232 kilometers",
+    "planetType": "Gas Giant",
+    "info": "Saturn is the sixth planet from the Sun and the second-largest planet in our solar system. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium. Saturn is not the only planet to have rings, but none are as spectacular or as complex as Saturn's. Saturn also has dozens of moons.",
+    "url":"https://solarsystem.nasa.gov/planets/saturn/overview/"
+  },
+  "uranus":{
+    "day": "17.25 hours",
+    "year": "84 Earth years",
+    "radius": "25,362 kilometers",
+    "planetType": "Ice Giant",
+    "info": "The seventh planet from the Sun with the third largest diameter in our solar system, Uranus is very cold and windy. The ice giant is surrounded by 13 faint rings and 27 small moons as it rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side, orbiting the Sun like a rolling ball.",
+    "url":"https://solarsystem.nasa.gov/planets/uranus/overview/"
+  },
+  "neptune":{
+    "day": "16 hours",
+    "year": "165 Earth years",
+    "radius": "24,622 kilometers",
+    "planetType":"Ice Giant",
+    "info":"Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.",
+    "url":"https://solarsystem.nasa.gov/planets/neptune/overview/"
+  }
+}

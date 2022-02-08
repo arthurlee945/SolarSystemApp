@@ -1,0 +1,1002 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Space+Mono&display=swap');
+
+*{
+  margin:0px;
+  padding:0px;
+}
+Body{
+  background: #000000;
+  color:#f7f7f7;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:100vh;
+  user-select: none;
+  overflow:hidden;
+  font-family: 'Space Mono', "Lato", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+.backgroundBox{
+  position:absolute;
+  width:100%;
+  left:0;
+  top:0;
+  display:flex;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor:grab;
+  .backgroundImg{
+    z-index: -1;
+    position:absolute;
+    filter:contrast(200%);
+    mix-blend-mode: screen;
+    top:0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    animation: star1 150s linear;
+    animation-iteration-count: infinite;
+    @keyframes star1 {
+      0%{
+        opacity: 1;
+        transform:translateX(100%);
+      }
+      10%{
+        filter:contrast(200%);
+      }
+      12%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      14%{
+        filter:contrast(200%);
+      }
+  
+      30%{
+        filter:contrast(200%);
+      }
+      32%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      34%{
+        filter:contrast(200%);
+      }
+  
+      50%{
+        filter:contrast(200%);
+      }
+      52%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      54%{
+        filter:contrast(200%);
+      }
+  
+      70%{
+        filter:contrast(200%);
+      }
+      72%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      74%{
+        filter:contrast(200%);
+      }
+  
+      90%{
+        filter:contrast(200%);
+      }
+      92%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      94%{
+        filter:contrast(200%);
+      }
+  
+      100%{
+        opacity: 1;
+        transform:translateX(-100%);
+        filter:contrast(200%);
+      }
+    }
+  }
+  .backgroundImg2{
+    z-index: -1;
+    position:absolute;
+    filter:contrast(200%);
+    mix-blend-mode: screen;
+    top:0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    animation: star2 150s linear;
+    animation-iteration-count: infinite;
+    animation-delay:75s;
+    @keyframes star2 {
+      0%{
+        opacity: 1;
+        transform:translateX(100%);
+      }
+      10%{
+        filter:contrast(200%);
+      }
+      12%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      14%{
+        filter:contrast(200%);
+      }
+  
+      30%{
+        filter:contrast(200%);
+      }
+      32%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      34%{
+        filter:contrast(200%);
+      }
+  
+      50%{
+        filter:contrast(200%);
+      }
+      52%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      54%{
+        filter:contrast(200%);
+      }
+  
+      70%{
+        filter:contrast(200%);
+      }
+      72%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      74%{
+        filter:contrast(200%);
+      }
+  
+      90%{
+        filter:contrast(200%);
+      }
+      92%{
+        filter:contrast(150%) brightness(1.5);
+      }
+      94%{
+        filter:contrast(200%);
+      }
+      
+      100%{
+        opacity: 1;
+        transform:translateX(-100%);
+      }
+    }
+  }
+  .backgroundImg3{
+    z-index: -1;
+    position:absolute;
+    filter:contrast(200%);
+    mix-blend-mode: screen;
+    top:0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    animation: star3 75s linear;
+    animation-fill-mode: forwards;
+    @keyframes star3 {
+      from{
+        opacity:0;
+        left:0;
+      }
+      5%{
+        opacity:1;
+      }
+      99%{
+        opacity:1;
+        display: inline;
+      }
+      to{
+        opacity:0;
+        display: none;
+        transform:translateX(-100%);
+      }
+    }
+  }
+  .starBox{
+    position:absolute;
+    width:100%;
+    height:100%;
+    .star{
+      position:absolute;
+      $starSize: random(2)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      background: radial-gradient(#f7f7f7 0%, #f7f7f7 35%,transparent 55%);
+      border-radius: 50%;
+      opacity:0;
+      mix-blend-mode: screen;
+      animation: stardot 2s infinite, starSize 2s infinite, pos 10s infinite;
+      animation-timing-function: linear;
+      animation-delay: 5s;
+     @keyframes stardot {
+       0%, 10%{opacity:0;};
+       50%{opacity: 1;};
+       90%, 100%{opacity: 0;};     
+     }
+     @keyframes starSize {
+      0%{
+        transform: scale3d(1, 1, 1);
+        }
+        50%{
+        transform: scale3d(1.5, 1.5, 1);
+        }
+        100%{
+        transform:scale3d(1, 1, 1);
+        }
+     }
+     @keyframes pos{
+       0%, 20% {
+        $x: random(100)-50;
+        $y: random(100)-50;
+        transform: translate($x + vw, $y + vh);
+       }
+       21%, 40%{
+        $a: random(100)-50;
+        $b: random(100)-50;
+        transform: translate($a + vw, $b + vh);
+       }
+       41%, 60%{
+        $c: random(100)-50;
+        $d: random(100)-50;
+        transform: translate($c + vw, $d + vh);
+       }
+       61%, 80%{
+        $e: random(100)-50;
+        $f: random(100)-50;
+        transform: translate($e + vw, $f + vh);
+       }
+       81%, 100%{
+        $g: random(100)-50;
+        $h: random(100)-50;
+        transform: translate($g + vw, $h + vh);
+       }
+     }
+    }
+    .star2{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      animation-delay: 7s;
+      left:25%;
+      top:25%;
+    }
+    .star3{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      animation-delay:8s;
+      top:75%;
+      left:75%;
+    }
+    .star4{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      top:25%;
+      left:75%;
+      animation-delay:9s;
+    }
+    .star5{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      top:75%;
+      left:25%;
+      animation-delay:11s;
+    }
+    .star6{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      top:65%;
+      left:55%;
+      animation-delay:12s;
+    }
+    .star7{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      top:40%;
+      left:66%;
+      animation-delay:10s;
+    }
+    .star8{
+      @extend .star;
+      $starSize: random(3)+1;
+      width: $starSize + px;
+      height: $starSize + px;
+      top:32%;
+      left:70%;
+      animation-delay:14s;
+    }
+  }
+}
+.planetBox{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &::after{
+    content:"";
+    position:absolute;
+    display:block;
+    width:25vw;
+    height:25vw;
+    transform:translateY(-2.5rem);
+    border-radius: 50%;
+    border:1px solid #000000;
+    mix-blend-mode: darken;
+    box-shadow:   inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset 0 0 2rem #0f0f0fce, inset 27vw 0 2rem #0f0f0f00;
+    pointer-events: none;
+    opacity:0.5;
+    animation: sAct 2s linear, shadowani 30s infinite linear;
+    @keyframes sAct {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 0.5;
+      }
+    }
+    @keyframes shadowani {
+      0%{
+        box-shadow:   inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset 0 0 2rem #0f0f0f00, inset 27vw 0 2rem #0f0f0f00;
+      }
+      5%{
+        box-shadow:   inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset 0 0 2rem #0f0f0fce, inset 27vw 0 2rem #0f0f0f00;
+      }
+      34%{
+        box-shadow:  inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset, -27vw 0 2rem #0f0f0fce, inset 27vw 0 2rem #0f0f0f00;
+      }
+      35%{
+        box-shadow: inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset, -27vw 0 2rem #0f0f0f00, inset 27vw 0 2rem #0f0f0fce;;
+      }
+      36%{
+        box-shadow: inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4,inset -27vw 0 2rem #0f0f0f00, inset 27vw 0 2rem #0f0f0fce;
+      }
+      60%{
+        box-shadow: inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset -27vw 0 2rem #0f0f0f00,inset 0 0 2rem #0f0f0fce;
+      }
+      100%{
+        box-shadow: inset 0 0 5px #0f0f0f,inset 0 0 15px #0f0f0fb4, inset -27vw 0 2rem #0f0f0f00, inset 0 0 2rem #0f0f0f00;
+      }
+    }
+  }
+  .planetImage{
+    width:25vw;
+    border-radius: 50%;
+    object-fit: contain;
+    box-shadow: 0 0 1rem #000000;
+    opacity:0;
+    filter:brightness(1.2);
+    pointer-events: none;
+    animation: planet 2s linear, sat 30s infinite;
+    animation-fill-mode: forwards;
+    @keyframes planet {
+      from{opacity: 0;}
+      to{opacity:1;}
+    }
+    @keyframes sat {
+      0%, 5%{
+        filter: saturate(100%),brightness(1.2),contrast(1);
+      }
+      39%,40%, 41%{
+        filter: saturate(85%),brightness(1.2),contrast(1.5);
+      }
+      85%, 100%{
+        filter: saturate(100%), brightness(1.2),contrast(1);
+      }
+    }
+  }
+  .planetName{
+    display:flex;
+    height:5rem;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5rem;
+    font-size:2.5rem;
+    opacity:0;
+    transition: letter-spacing 0.2s, color 0.2s;
+    animation: pName 1s linear;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+    text-transform: uppercase;
+    cursor:pointer;
+    &:hover{
+      letter-spacing:0.8rem;
+    }
+    &:active{
+      letter-spacing:0.2rem;
+      color:#f7f7f763;
+    }
+    @keyframes pName {
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+  }
+}
+.fadeAni{
+  animation: planetfade 1s linear;
+  animation-fill-mode: forwards;
+  @keyframes planetfade{
+    from{opacity:0};
+    to{opacity:1};
+  }
+}
+
+.planetNavBox{
+  position:absolute;
+  width:100vw;
+  height: 5rem;
+  top:0;
+  left:0;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size:1rem;
+  .closeIcon{
+    width:5%;
+    height: 5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor:pointer;
+    &:active{
+      animation: spin1 0.25s linear;
+      @keyframes spin1 {
+        from{transform: rotate(0);}
+        to{transform: rotate(360deg);}
+      }
+    }
+    animation:spin2 0.25s linear;
+    @keyframes spin2 {
+      from{transform: rotate(0);}
+        to{transform: rotate(360deg);}
+    }
+  }
+  .contentbox{
+    width:95%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .selectedPlanet{
+      margin:0 4rem 0 4rem;
+      min-width:10rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+      opacity:0;
+      animation: planets 0.5s linear;
+      animation-fill-mode: forwards;
+      @keyframes planets {
+        from{opacity:0;}
+        to{opacity: 0.8;}
+      }
+    }
+    >p{
+      cursor:pointer;
+      margin-right:6rem;
+      height:4rem;
+      width:6rem;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      animation: introslide 0.5s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+      transition: letter-spacing 0.5s;
+
+      opacity:0;
+      &:hover{
+        letter-spacing: 0.5rem;
+      }
+      &:active{
+        letter-spacing:0.2rem;
+        opacity:0.8;
+      }
+      @keyframes introslide {
+        from{
+          transform:translateY(-1rem);
+          opacity:0;
+        }
+        to{
+          transform:translateY(0);
+          opacity:1;
+        }
+      }
+    }
+    >P:nth-child(3){
+      animation-delay:1s;
+    }
+    >P:nth-child(4){
+      animation-delay:1.5s;
+    }
+    >P:nth-child(5){
+      animation-delay:2s;
+    }
+    >P:nth-child(6){
+      animation-delay:2.5s;
+    }
+    >P:nth-child(7){
+      animation-delay:3s;
+    }
+    >P:nth-child(8){
+      animation-delay:3.5s;
+    }
+    >P:nth-child(9){
+      animation-delay:4s;
+    }
+  }
+  .openIcon{
+    @extend .closeIcon;
+  }
+}
+.infoBox{
+  z-index:2;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  text-transform: uppercase;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity:0;
+  background-color: #00000071;
+  backdrop-filter:blur(5px)grayscale(50%);
+  animation: blur 0.25s linear;
+  animation-fill-mode: forwards;
+  .container{
+    width:35%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+    .closeInfo{
+      width:100%;
+      text-align: right;
+      font-size:1.2rem;
+      margin-right:1rem;
+      cursor:pointer;
+      transition: color 0.25s;
+      &:hover{
+        color: #f7f7f769;
+      }
+    }
+    >div{
+      margin-top:1rem;
+      font-size: 1.1rem;
+    }
+    >a{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin-top:2rem;
+      text-decoration: none;
+      color:#f7f7f7;
+      border: 1px solid #f7f7f7;
+      border-radius:10px;
+      height:2rem;
+      width:25%;
+      transition:letter-spacing 0.25s, color 0.25s, border 0.25s;
+      &:hover{
+        letter-spacing: 0.3rem;
+      }
+      &:active{
+        letter-spacing:0.1rem;
+        color:#f7f7f77a;
+        border:1px solid #f7f7f77a;
+      }
+    }
+  }
+  @keyframes blur {
+    from{opacity:0;}
+    to{opacity:1;}
+  }
+}
+
+.quoteBox{
+  z-index:2;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  text-transform: uppercase;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000071;
+  backdrop-filter:blur(5px)grayscale(50%);
+  animation: quotebox 2s linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5s;
+  .quote{
+    width:35%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+    >h2{
+      opacity:0;
+      animation: quote 1s linear;
+      animation-fill-mode: forwards;
+      animation-delay:1s;
+      @keyframes quote {
+        from{opacity:0;}
+        to{opacity:1;}
+      }
+    }
+    >p{
+      width:100%;
+      text-align: right;
+      animation: author 1s linear;
+      animation-fill-mode: forwards;
+      opacity:0;
+      animation-delay:2.5s;
+      @keyframes author {
+        from{opacity:0;}
+        to{opacity:1;}
+      }
+    }
+
+    
+  }
+  @keyframes quotebox {
+    from{opacity:1;
+      backdrop-filter:blur(5px)grayscale(50%);}
+    to{opacity:0;
+      backdrop-filter:blur(0)grayscale(100%);}
+  }
+}
+.signature{
+  position:absolute;
+  width:25vw;
+  text-align:center;
+  bottom:1rem;
+  font-size:0.7rem;
+  >a{
+    z-index:3;
+    font-size:0.8rem;
+    text-decoration: none;
+    color:#f7f7f7;
+    &:hover{
+      color:#c671ff
+    }
+  }
+}
+
+
+@media  only screen and (min-device-width:375px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio:3){
+  Body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+  }
+  .backgroundBox{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    left:0;
+    top:0;
+    overflow:hidden;
+    cursor:none;
+    .backgroundImg{
+      height:100vh;
+      width:300vw;
+      opacity:0;
+      animation: star1 60s linear;
+      animation-iteration-count: infinite;
+      @keyframes star1 {
+        0%{
+          opacity: 1;
+          transform:translateX(100%);
+        }
+        10%{
+          filter:contrast(200%);
+        }
+        12%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        14%{
+          filter:contrast(200%);
+        }
+    
+        30%{
+          filter:contrast(200%);
+        }
+        32%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        34%{
+          filter:contrast(200%);
+        }
+    
+        50%{
+          filter:contrast(200%);
+        }
+        52%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        54%{
+          filter:contrast(200%);
+        }
+    
+        70%{
+          filter:contrast(200%);
+        }
+        72%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        74%{
+          filter:contrast(200%);
+        }
+    
+        90%{
+          filter:contrast(200%);
+        }
+        92%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        94%{
+          filter:contrast(200%);
+        }
+    
+        100%{
+          opacity: 1;
+          transform:translateX(-100%);
+          filter:contrast(200%);
+        }
+      }
+    }
+    .backgroundImg2{
+      z-index: -1;
+      height:100vh;
+      width:300vw;
+      animation: star2 60s linear;
+      animation-iteration-count: infinite;
+      animation-delay:30s;
+      @keyframes star2 {
+        0%{
+          opacity: 1;
+          transform:translateX(100%);
+        }
+        10%{
+          filter:contrast(200%);
+        }
+        12%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        14%{
+          filter:contrast(200%);
+        }
+    
+        30%{
+          filter:contrast(200%);
+        }
+        32%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        34%{
+          filter:contrast(200%);
+        }
+    
+        50%{
+          filter:contrast(200%);
+        }
+        52%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        54%{
+          filter:contrast(200%);
+        }
+    
+        70%{
+          filter:contrast(200%);
+        }
+        72%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        74%{
+          filter:contrast(200%);
+        }
+    
+        90%{
+          filter:contrast(200%);
+        }
+        92%{
+          filter:contrast(150%) brightness(1.5);
+        }
+        94%{
+          filter:contrast(200%);
+        }
+        
+        100%{
+          opacity: 1;
+          transform:translateX(-100%);
+        }
+      }
+    }
+    .backgroundImg3{
+      height:100vh;
+      width:300vw;
+      opacity:0;
+      animation: star3 30s linear;
+      animation-fill-mode: forwards;
+      @keyframes star3 {
+        from{
+          opacity:0;
+          left:0;
+        }
+        5%{
+          opacity:1;
+        }
+        99%{
+          opacity:1;
+          display: inline;
+        }
+        to{
+          opacity:0;
+          display: none;
+          transform:translateX(-100%);
+        }
+      }
+    }
+  }
+  .planetBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &::after{
+      width:85vw;
+      height:85vw;
+    }
+    .planetImage{
+      width:85vw;
+    }
+  }
+  .fadeAni{
+    animation: planetfade 1s linear;
+    animation-fill-mode: forwards;
+    @keyframes planetfade{
+      from{opacity:0};
+      to{opacity:1};
+    }
+  }
+
+  .planetNavBox{
+    position:absolute;
+    width:100vw;
+    height:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .closeIcon{
+      margin:1.5rem;
+      width:100%;
+      height: 5vh;
+      cursor:none;
+    }
+    .contentbox{
+      height:95vh;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      .selectedPlanet{
+        margin: 2rem 0 2rem 0;
+        min-width:auto;
+        animation: planets 0.25s linear;
+        animation-fill-mode: forwards;
+        animation-delay:0.25s;
+      }
+      >p{
+        cursor:none;
+        margin:0 0 1rem 0;
+        height:4rem;
+        width:auto;
+        animation: introslide 0.25s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+        opacity:0;
+      }
+      >P:nth-child(3){
+        animation-delay:0.75s;
+      }
+      >P:nth-child(4){
+        animation-delay:1s;
+      }
+      >P:nth-child(5){
+        animation-delay:1.25s;
+      }
+      >P:nth-child(6){
+        animation-delay:1.5s;
+      }
+      >P:nth-child(7){
+        animation-delay:1.75s;
+      }
+      >P:nth-child(8){
+        animation-delay:2s;
+      }
+      >P:nth-child(9){
+        animation-delay:2.15s;
+      }
+    }
+    .openIcon{
+      @extend .closeIcon;
+    }
+  }
+  .navBoxAni{
+    width:100vw;
+    height:100vh;
+    z-index:1;
+    animation: navblurset 0.20s ease;
+    animation-fill-mode:forwards;
+    @keyframes navblurset {
+      from{backdrop-filter:blur(0)grayscale(100%);}
+      to{
+        backdrop-filter:blur(5px)grayscale(50%);}
+    }
+  }
+  
+  .infoBox{
+    width:100vw;
+    height:100vh;
+    .container{
+      width:85%;
+      >div{
+        font-size: 1rem;
+      }
+      >a{
+        width:65%;
+      }
+    }
+
+  }
+  
+  .quoteBox{
+    width:100vw;
+    height:100vh;
+    .quote{
+      width:90%;
+    }
+  }
+  .signature{
+    width:85vw;
+  }
+  
+}
